@@ -1,0 +1,87 @@
+@import '_breakpoints.scss';
+
+:root {
+  --color-primary: #CCCCFF;
+  --color-secondary: #FE0101;
+  --color-grey: #E1E1E1;
+}
+
+body {
+  line-height: 1.5;
+  background: url('../bg.png') fixed;
+  background-size: 184px 184px;
+  background-repeat: repeat;
+}
+
+button {
+  display: inline-block;
+  font-weight: 400;
+  color: #212529;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 3px solid transparent;
+  padding: .6rem .75rem;
+  line-height: 1.5;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+  &:focus {
+    outline-color: var(--color-primary);
+  }
+
+  @include for-tablet-portrait-up {
+    padding: .75rem .75rem;
+  }
+}
+
+.ut-btn {
+  width: 100%;
+  max-width: 320px;
+  border-color: var(--color-secondary);
+  color: var(--color-secondary);
+  font-size: 1.3rem;
+  font-weight: bold;
+
+  &:focus {
+    outline: none !important;
+    box-shadow: 0 0 0 0.2rem rgba(var(--color-secondary), 0.26) !important;
+  }
+
+  @include for-tablet-portrait-up {
+    font-size: 1.875rem; 
+  }
+}
+
+.title {
+  color: var(--color-secondary);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+
+  @include for-desktop-up {
+    font-size: 2.8rem;
+    text-align: left;
+  }
+
+  @include for-big-desktop-up {
+    font-size: 3.4rem;
+  }
+}
+
+/* BOOTSTRAP OVERRIDES
+=============================================== */
+
+.bg-primary {
+  background-color: var(--color-primary) !important;
+}
+
+.bg-grey {
+  background-color: var(--color-grey) !important;
+}
