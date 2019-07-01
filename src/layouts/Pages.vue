@@ -1,22 +1,17 @@
 <template>
   <transition name="fade" appear>
     <div>
-        <Header />
+        <PagesHeader />
         <slot />
+        <SubFooter />
         <Footer />
     </div>
   </transition>
 </template>
 
 <script>
-import Header from '../components/PagesHeader';
-import Footer from '../components/Footer';
-
 export default {
-  components: {
-    Header,
-    Footer
-  }
+
 }
 </script>
 

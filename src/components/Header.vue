@@ -1,14 +1,14 @@
 <template>
-  <b-navbar class="header d-lg-flex justify-content-lg-center" toggleable="lg" fixed="top">
+  <b-navbar class="header" toggleable="lg">
     <b-navbar-toggle target="nav-collapse"/>
 
-    <b-collapse id="nav-collapse" is-nav class="p-4 py-sm-3 px-sm-0">
-      <b-navbar-nav fill>
-        <b-nav-item href="/pah">WHAT IS PAH?</b-nav-item>
-        <b-nav-item href="/manage">MANAGING YOUR PAH</b-nav-item>
-        <b-nav-item href="treatment">TREATMENT</b-nav-item>
-        <b-nav-item href="resources">RESOURCES</b-nav-item>
-        <b-nav-item href="commitment">OUR COMMITMENT TO PAH</b-nav-item>
+    <b-collapse id="nav-collapse" is-nav class="py-sm-2 px-sm-0">
+      <b-navbar-nav fill class="mx-lg-auto">
+        <b-nav-item href="/pah" class="d-flex justify-content-center align-items-center">WHAT IS PAH?</b-nav-item>
+        <b-nav-item href="/manage" class="d-flex justify-content-center align-items-center">MANAGING YOUR PAH</b-nav-item>
+        <b-nav-item href="treatment" class="d-flex justify-content-center align-items-center">TREATMENT</b-nav-item>
+        <b-nav-item href="resources" class="d-flex justify-content-center align-items-center">RESOURCES</b-nav-item>
+        <b-nav-item href="commitment" class="d-flex justify-content-center align-items-center">OUR COMMITMENT TO PAH</b-nav-item>
         <b-nav-item href="#"><button class="join font-weight-bold">JOIN OUR EMAIL LIST</button></b-nav-item>
       </b-navbar-nav>
     </b-collapse>
@@ -18,7 +18,16 @@
 <script>
 
   export default {
-    
+    mounted() {
+      let header = document.querySelector('.header');
+      header.style.background = 'rgba(244, 244, 253, 0)'
+      document.addEventListener('scroll', setBackgroundColor)
+
+      function setBackgroundColor() {
+        let offset = window.scrollY / (document.body.offsetHeight - window.innerHeight)
+        header.style.background = (offset * 16) > 0.99 ? 0.99 : `rgba(244, 244, 253, ${offset * 16})`;
+      }
+    }
   }
 </script>
 
@@ -26,21 +35,11 @@
 @import '~/assets/styles/_breakpoints.scss';
 
 .header {
-  background: url('../assets/bg.png') fixed;
-  background-size: 184px 184px;
-  background-repeat: repeat;
   border: none;
-
-  @include for-desktop-up {
-    background-image: none;
-  }
-}
-
-#nav-collapse {
-  max-width: 1440px;
 }
 
 .navbar-nav {
+  max-width: 1140px;
   width: 100%;
 }
 
@@ -69,15 +68,15 @@
   }
 
   @include for-desktop-up {
-    padding: .425rem .75rem;
-    font-size: 0.9rem;
+    padding: .75rem;
+    font-size: 0.8rem;
 
     & + .nav-item {
       margin-top: 0;
     }
   }
 
-  @include for-big-desktop-up {
+  @include for-huge-desktop-up {
     font-size: 1rem;
   }
 }

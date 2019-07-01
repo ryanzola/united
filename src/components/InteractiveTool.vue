@@ -421,7 +421,6 @@ export default {
   --color-high: #ED1F24;
 
   width: 100%;
-  max-width: 1024px;
   visibility: hidden;
   font-family: 'Proxima Nova', sans-serif;
 }

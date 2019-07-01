@@ -1,123 +1,136 @@
 <template>
   <Layout>
     <section id="hero" class="px-1 px-md-0 pb-3 pb-md-5 mb-3 mb-md-5">
-      <b-container fluid class="d-flex align-items-center flex-column">
+      <b-container>
         <b-row class="mb-5">
-          <b-col class="text-center px-lg-5">
+          <b-col>
             <img class="w-100" src="../assets/ut-hero.png" alt="hero image"/>
           </b-col>
         </b-row>
-        <b-row class="my-md-5">
-          <b-col class="text-center mx-auto">     
-            <svg viewBox="0 0 28 22" class="arrow">
-              <path d="M0 0 h28 l -14 22 l -14 -22 Z" fill="black"/>
-            </svg>
+        <b-row class="mt-md-5">
+          <b-col class="text-center">
+            <b-nav-item to="#what-is-pah">
+              <svg viewBox="0 0 28 22" class="arrow">
+                <path d="M0 0 h28 l -14 22 l -14 -22 Z" fill="black" />
+              </svg>
+            </b-nav-item>
+
           </b-col>
         </b-row>
       </b-container>
     </section><!-- hero -->
      
     <section id="what-is-pah" class="py-5 py-md-5 mb-4 mb-md-5">
-      <b-container fluid>
-        <b-row class="mx-auto mb-lg-4  content">
-          <b-col lg="3" offset-lg="1" class="p-sm-4 p-lg-4 d-none d-lg-block">
+      <b-container>
+        <b-row class="content">
+          <b-col lg="3" offset-lg="1" class="p-sm-4 py-lg-5 px-lg-0 d-none d-lg-block">
             <img src="../assets/ut-lungs.png" alt="lungs" class="w-100"> 
           </b-col>
 
-          <b-col lg="7" class="p-0 p-lg-5 text-center text-lg-left">
-            <b-row class="mb-5">
-              <b-col>
-                <div>
-                  <h1 class="title mb-4">WHAT IS PAH?</h1>
-                  <p>Looking for more info about <br>what PAH is? Look no further.</p>
-                </div>
-              </b-col>
-            </b-row>
+          <b-col lg="7" class="p-0 p-lg-5 text-center text-lg-left">     
+            <h1 class="title mb-4">WHAT IS PAH?</h1>
+            <p class="mb-5">Looking for more info about <br>what PAH is? Look no further.</p>
+  
 
-            <b-row>
-              <b-col class="text-center text-lg-left">
-                <g-link to="/pah" class="ut-btn">
-                  <button class="ut-btn">Learn More</button>
-                </g-link>
-              </b-col>
-            </b-row>
+  
+            <g-link to="/pah" class="ut-btn">
+              <button class="ut-btn">Learn More</button>
+            </g-link>
           </b-col>
         </b-row>
       </b-container>
     </section><!-- what-is-pah -->
 
-    <section id="know-your-risk" class="py-5 py-md-5 mb-4 mb-md-5">
+    <section id="know-your-risk" class="mx-auto py-5 mb-4 mb-md-5">
       <b-container>
         <b-row class="content">
-          <b-col>
-            <div>
-              <h1 class="title mb-5">WHY IT'S IMPORTANT<br> TO KNOW YOUR RISK</h1>
-              <p class="pl-lg-5">
-                If you have PAH, there's no time to lose. Every moment you wait to talk
-                to your doctor is a moment PAH will steal from you. It's important to have your 
-                doctor determine your risk score and help you understand all available treatment 
-                options. Make sure you and your doctor are doing everything you can to take on 
-                your PAH. But the most important thing is to take action by talking to your doctor 
-                about your treatment options.
-              </p>
-            </div>
+          <b-col> 
+            <b-row class="mb-3 mb-xl-5">
+              <b-col>
+                <h1 class="title">WHY IT'S IMPORTANT<br> TO KNOW YOUR RISK</h1>
+              </b-col>
+            </b-row>
+
+            <b-row>
+              <b-col lg="11" offset-lg="1">
+                <p>
+                  <strong>PAH is a serious, progressive disease.</strong> Having your doctor assess your risk status and the 
+                  chance that your PAH will progress is an important step in determining your treatment 
+                  plan. <strong>Make sure you and your doctor are doing everything you can to take on your PAH.</strong> 
+                  The most important thing is to take action by talking to your doctor about your risk status 
+                  and treatment options.
+                </p>
+              </b-col>
+            </b-row> 
           </b-col>
         </b-row>
-
-
       </b-container>
     </section><!-- know-your-risk -->
 
-    <section id="know-where-you-stand">
+    <section id="know-where-you-stand" class="pt-5 pt-md-5">
       <b-container>
-        <b-row class="mb-5">
+        <b-row class="content mb-5">
           <b-col>
-            <div>
-              <h1 class="title text-md-center mb-3">KNOW WHERE YOU STAND</h1>
-              <p class="lead text-center mb-3">
-                Slide the bottom arrow from left to right to see the progression of PAH from low to 
-                high risk.<br>Click on each test to learn more about the lab values assoicated with each 
-                risk score.
+    
+              <h1 class="title text-md-center mb-4">DO YOU KNOW WHERE YOU STAND?</h1>
+              <p class="text-center mb-3">
+                <strong>Slide the bottom arrow from left to right to see the progression of PAH from low to high risk. 
+                  Click on each test to learn more about the lab values associated with each risk score.</strong>
               </p>
-
               <p class="text-center">
-                If you're immediate or high risk in any of these areas, there may be more you can do to 
-                manage your PAH. Even a single "high risk" result can impact where you stand with your 
-                risk score. When you know where you stand, you stand a better chance of taking the fight 
-                to PAH.
+                If you’re intermediate or high risk in any of these areas, there may be more you can do to manage 
+                your PAH. <strong>Even a single “high risk” result can impact where you stand with your risk score.</strong> 
+                When you know where you stand, you stand a better chance of taking the fight to PAH.
               </p>
-            </div>
+       
           </b-col>
         </b-row>
       </b-container>
     </section><!-- know-where-you-stand -->
 
-    <section id="interactive-tool">
+    <section id="interactive-tool" class="mb-5">
       <b-container>
-        <b-row class="text-center">
+        <b-row class="text-center mb-2">
           <b-col>
             <ClientOnly>
               <InteractiveTool />
             </ClientOnly>
           </b-col>
         </b-row>
+        <b-row class="text-center">
+          <b-col lg="10" offset-lg="1">
+            <p>
+              This tool is not intended to nor should it be used to diagnose PAH or determine your risk score. 
+              We encourage you to use this information to talk to your doctor about your risk status and discuss 
+              whether now is the time to consider making adjustments to your treatment plan.
+            </p>
+          </b-col>
+        </b-row>
       </b-container>
     </section><!-- interactive-tool -->
 
-    <section id="managing-your-pah" class="py-3 py-md-5 my-3 my-md-5">
-      <b-container class="my-0 my-sm-5">
-        <b-row>
-          <b-col sm="8" offset-sm="3" class="py-5 pr-md-5 bg-grey">
-            <img src="../assets/list.png" alt="checklist" class="position-absolute"> 
-            <div class="content">
-              <h1 class="title mb-4">MANAGING YOUR PAH</h1>
-              <p class="mb-5 mb-sm-0">If you need info about managing your PAH, you've come to the right place.</p>
-            </div>
+    <section id="managing-your-pah" class="py-5 py-md-5 mb-4 mb-md-5">
+      <b-container class="pb-5">
+        <b-row class="content">
+          <b-col class="text-center text-lg-left">
+            <b-row class="mb-5">
+              <b-col lg="8" class="pt-lg-5">
+                  <h1 class="title mb-4">MANAGING YOUR PAH</h1>
+                  <p>
+                    If you need info about managing your 
+                    PAH, you’ve come to the right place.
+                  </p>
+              </b-col>
+
+              <b-col lg="3" class="d-none d-lg-block">
+                <img src="../assets/checklist.png" alt="lungs" class="w-100"> 
+              </b-col>
+            </b-row>
 
             <b-row>
-              <b-col sm="5" offset-sm="6" class="text-center text-lg-right">
-                <g-link to="/pah">
-                  <button class="ut-btn">Get Started</button>
+              <b-col offset-lg="5">
+                <g-link to="/pah" class="ut-btn">
+                  <button class="ut-btn">Getting Started</button>
                 </g-link>
               </b-col>
             </b-row>
@@ -126,20 +139,24 @@
       </b-container>
     </section><!-- managing-your-pah -->
 
-    <section id="treatment" class="py-3 py-md-5 my-3 my-md-5">
-      <b-container>
-        <b-row>
-          <b-col sm="8" offset-sm="1" class="py-5 pr-md-5 bg-primary">
-            <img src="../assets/puffer.png" alt="checklist" class="position-absolute"> 
+    <section id="treatment" class="py-5 py-md-5 mb-4 mb-md-5">
+      <b-container class="pb-lg-5">
+        <b-row class="content">
+          <b-col lg="3" class="d-none d-lg-block">
+            <img src="../assets/treatment.png" alt="treatment icon" class="w-100"> 
+          </b-col>
 
-            <div class="content">
-              <h1 class="title mb-4">TREATMENT</h1>
-              <p class="mb-5 mb-sm-0">There's no time to lose. Find a treatment that takes the fight to PAH.</p>
-            </div>
+          <b-col lg="8" offset-lg="1" class="pr-xl-5 pt-lg-5 text-center text-lg-left">
+            <b-row class="mb-5">
+              <b-col>            
+                <h1 class="title mb-4">TREATMENT</h1>
+                <p>There’s no time to lose. Find a treatment that takes the fight to PAH.</p>
+              </b-col>
+            </b-row>
 
             <b-row>
-              <b-col sm="5" offset-sm="5" class="d-flex justify-content-center justify-content-md-start">
-                <g-link to="/pah">
+              <b-col class="text-center text-lg-left">
+                <g-link to="/pah" class="ut-btn">
                   <button class="ut-btn">Take Action</button>
                 </g-link>
               </b-col>
@@ -148,17 +165,6 @@
         </b-row>
       </b-container>
     </section><!-- treatment -->
-
-    <section id="closing">
-      <b-container>
-        <b-row>
-          <b-col sm="8" offset-sm="2" class="text-center font-weight-bold">
-            <p>PAH IS A PROGRESSIVE DISEASE.</p>
-            <p>It's crucial to find a treatment plan that can help improve your risk status and delay disease progression.</p>
-          </b-col>
-        </b-row>
-      </b-container>
-    </section>
   </Layout>
 </template>
 
@@ -166,7 +172,7 @@
 import InteractiveTool from '../components/InteractiveTool';
 export default {
   metaInfo: {
-    title: 'Hello, world!'
+    title: 'No Time to Lose'
   },
   components: {
     InteractiveTool
@@ -188,24 +194,12 @@ br {
   }
 }
 
-section {
-  position: relative;
+.content img {
+  max-width: 300px;
 }
 
 /* HERO
 =============================================== */
-
-#hero {
-  padding-top: 60px;
-
-  @include for-tablet-portrait-up {
-    padding-top: 40px;
-  }
-}
-
-#hero .row {
-  max-width: 1440px;
-}
 
 #hero .arrow {
   height: 11px;
@@ -228,49 +222,45 @@ section {
   }
 }
 
-#what-is-pah .content {
-  font-weight: bold;
-}
-
 #what-is-pah .content::before {
   position: absolute;
   content: '';
-
   background-color: var(--color-primary);
-  border-radius: 4px;
+  border-radius: 0.4375rem;
 
   @include for-desktop-up {
-    height: 295px;
+    height: 260px;
     width: 550px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -42%);
   }
+  
   @include for-big-desktop-up {
-    height: 330px;
-    width: 745px;
+    height: 275px;
+    width: 550px;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -44%);
+    transform: translate(-50%, -42%);
   }
 }
 
 #what-is-pah p {
   margin-bottom: 0;
   line-height: 1.2;
-  font-size: 1.3rem;
-
-  @include for-tablet-portrait-up {
-    font-size: 2.4rem;
-  }
-
+  font-size: 1rem;
+  font-weight: bold;
 
   @include for-desktop-up {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+
+  @include for-desktop-up {
+    font-size: 2.1rem;
   }
 
   @include for-big-desktop-up {
-    font-size: 2.8rem;
+    font-size: 2.4rem;
   }
 }
 
@@ -320,16 +310,42 @@ section {
   }
 }
 
-#know-your-risk .tool {
-  width: 100%;
+#know-your-risk .content p {
+
+  @include for-desktop-up {
+    font-size: 1.2rem;
+  }
+
+  @include for-big-desktop-up {
+    font-size: 1.625rem;
+  }
 }
+
+// #know-your-risk .content::before {
+//   position: absolute;
+//   content: '';
+//   border-radius: 0.4375rem;
+//   background: var(--color-grey);
+
+//   @include for-desktop-up {
+//     top: 20px;
+//     left: 50%;
+//     height: 325px;
+//     width: 900px;
+//     transform: translateX(-47%);  
+//   }
+
+//   @include for-big-desktop-up {
+//     top: 20px;
+//     left: 50%;
+//     height: 425px;
+//     width: 1100px;
+//     transform: translateX(-46%);
+//   }
+// }
 
 /* KNOW WHERE YOU STAND
 =============================================== */
-
-#know-where-you-stand {
-
-}
 
 #know-where-you-stand::before,
 #know-where-you-stand::after {
@@ -364,12 +380,19 @@ section {
   }
 }
 
+#know-where-you-stand .content p {
+
+  @include for-desktop-up {
+    font-size: 1.1rem;
+  }
+
+  @include for-big-desktop-up {
+    font-size: 1.625rem;
+  }
+}
+
 /* INTERACTIVE TOOL
 =============================================== */
-
-#interactive-tool {
-
-}
 
 #interactive-tool::before,
 #interactive-tool::after {
@@ -409,84 +432,102 @@ section {
 /* MANAGING YOUR PAH
 =============================================== */
 
-#managing-your-pah .content {
+#managing-your-pah {
+  background-color: var(--color-grey);
+
+  @include for-desktop-up {
+    background-color: unset;
+  }
+}
+
+#managing-your-pah .content p {
+  margin-bottom: 0;
+  line-height: 1.3;
+  font-size: 1rem;
   font-weight: bold;
 
-  @include for-tablet-portrait-up {
-    width: 105%;
-    transform: translate(-140px, -100px)
-  }
-}
-
-#managing-your-pah p {
-  margin-bottom: 0;
-  line-height: 1.2;
-
-  @include for-tablet-portrait-up {
-    font-size: 2.5rem;
-  }
-}
-
-#managing-your-pah img {
-  display: none;
-
-  @include for-tablet-portrait-up {
-    display: block;
-    height: 220px;
-    right: -70px;
-    top: -95px;
+  @include for-desktop-up {
+    font-size: 1.8rem;
   }
 
   @include for-desktop-up {
-    display: block;
-    height: 220px;
-    right: -95px;
-    top: -95px;
+    font-size: 2.1rem;
+  }
+
+  @include for-big-desktop-up {
+    font-size: 2.4rem;
+  }
+}
+
+#managing-your-pah::before {
+  position: absolute;
+  content: '';
+
+  @include for-desktop-up {
+    height: 270px;
+    width: 600px;
+    left: 50%;
+    transform: translate(-49%, 90px);
+    border-radius: 0.4375rem;
+    background: var(--color-grey);
+  }
+
+  @include for-big-desktop-up {
+    right: 50%;
+    height: 290px;
+    width: 700px;
+    transform: translate(-51%, 100px);
   }
 }
 
 /* TREATMENT
 =============================================== */
 
-#treatment .content {
-  font-size: 2rem;
-  font-weight: bold;
+#treatment {
+  background-color: var(--color-primary);
 
-  @include for-tablet-portrait-up {
-    font-size: 2.5rem;
-    transform: translate(200px, -100px)
-  }
   @include for-desktop-up {
-    font-size: 2.5rem;
-    transform: translate(290px, -100px)
+    background-color: unset;
   }
 }
 
-#treatment p {
+#treatment .content p {
   margin-bottom: 0;
   line-height: 1.2;
-  letter-spacing: -0.2px;
+  font-size: 1rem;
+  font-weight: bold;
 
-  @include for-tablet-portrait-up {
-    font-size: 2.5rem;
+  @include for-desktop-up {
+    font-size: 1.8rem;
+  }
+
+  @include for-desktop-up {
+    font-size: 2.1rem;
+  }
+
+  @include for-big-desktop-up {
+    font-size: 2.4rem;
   }
 }
 
-#treatment img {
-  display: none;
+#treatment .content::before {
+  position: absolute;
+  content: '';
+  border-radius: 0.4375rem;
+  background: var(--color-primary);
 
-  @include for-tablet-portrait-up {
-    display: block;
-    height: 220px;
-    left: -46px;
-    top: -110px;
+  @include for-desktop-up {
+    left: 50%;
+    height: 250px;
+    width: 610px;
+    transform: translate(-68%, 90px);
   }
-}
 
-/* CLOSING
-=============================================== */
-
-#closing p:first-child {
-  color: var(--color-secondary);
+  @include for-big-desktop-up {
+    left: 50%;
+    height: 270px;
+    width: 700px;
+    transform: translate(-70%, 100px)
+  }
 }
 </style>

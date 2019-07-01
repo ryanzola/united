@@ -1,16 +1,16 @@
 <template>
-  <b-navbar class="header" toggleable="lg" fixed="top">
+  <b-navbar class="header px-lg-5" toggleable="lg">
     <b-navbar-brand href="/">
-      <g-image src="~/assets/logo.png" alt="logo" fit="contain" width="100px"/>
+      <g-image src="../assets/brand.png" alt="logo" fit="contain" width="100px"/>
     </b-navbar-brand>
 
 
   <b-navbar-toggle target="nav-collapse"/>
 
 
-    <b-collapse id="nav-collapse" is-nav>
-      <b-navbar-nav>
-        <b-nav-item to="pah" :active="$route.path === '/pah'">WHAT IS PAH?</b-nav-item>
+    <b-collapse id="nav-collapse" is-nav class="py-sm-2 px-sm-0">
+      <b-navbar-nav fill class="mx-lg-auto">
+        <b-nav-item to="pah">WHAT IS PAH?</b-nav-item>
         <b-nav-item to="manage">MANAGING YOUR PAH</b-nav-item>
         <b-nav-item to="treatment">TREATMENT</b-nav-item>
         <b-nav-item to="resources">RESOURCES</b-nav-item>
@@ -22,8 +22,18 @@
 </template>
 
 <script>
+import { setTimeout } from 'timers';
   export default {
-  
+    mounted() {
+      let header = document.querySelector('.header');
+      header.style.background = 'rgba(244, 244, 253, 0)'
+      document.addEventListener('scroll', setBackgroundColor)
+
+      function setBackgroundColor() {
+        let offset = window.scrollY / (document.body.offsetHeight - window.innerHeight)
+        header.style.background = (offset * 16) > 0.99 ? 0.99 : `rgba(244, 244, 253, ${offset * 16})`;
+      }
+    }
   }
 </script>
 
@@ -31,14 +41,23 @@
 @import '~/assets/styles/_breakpoints.scss';
 
 .header {
-  background: url('../assets/bg.png') fixed;
-  background-size: 184px 184px;
-  background-repeat: repeat;
   border: none;
+}
 
-  @include for-desktop-up {
-    background-image: none;
-  }
+.header::before {
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 96%;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 0);
+  background: var(--color-secondary);
+}
+
+.navbar-nav {
+  max-width: 1140px;
+  width: 100%;
 }
 
 .navbar-light .navbar-nav .nav-link {

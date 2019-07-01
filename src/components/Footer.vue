@@ -1,6 +1,6 @@
 <template>
   <footer class="ut-footer bg-primary d-flex flex-column py-4">
-    <b-container>
+    <b-container fluid>
       <b-row>
         <b-col sm="8" offset-sm="2">
           <b-navbar-nav fill class="d-flex flex-lg-row">
@@ -19,7 +19,7 @@
         </b-col>
 
         <b-col lg="2" class="d-flex align-items-center justify-content-center">
-          <g-image src="~/assets/footer-logo.png" class="footer-logo" />
+          <g-image src="~/assets/ut-footer-logo.png" class="footer-logo" />
         </b-col>
       </b-row>
     </b-container>
@@ -35,6 +35,10 @@ export default {
 <style lang="scss" scoped>
 @import '~/assets/styles/_breakpoints.scss';
 
+.container-fluid {
+  max-width: 1920px;
+}
+
 .ut-footer .navbar-nav li a {
   color: black;
   font-weight: bold;
@@ -49,10 +53,10 @@ export default {
 }
 
 .ut-footer .footer-logo {
-  width: 180px;
+  width: 150px;
 
   @include for-desktop-up {
-    width: 220px;
+    width: 100%;
   }
 }
 </style>
