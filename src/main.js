@@ -16,12 +16,21 @@ library.add(faUserSecret)
 
 import DefaultLayout from '~/layouts/Default.vue'
 
+import Header from '~/components/Header.vue'
+import PagesHeader from '~/components/PagesHeader.vue'
+import Footer from '~/components/Footer.vue'
+import SubFooter from '~/components/SubFooter.vue'
+
 import ThrowPropsPlugin from './vendor/gsap/ThrowPropsPlugin';
 
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.use(BootstrapVue);
   Vue.component('Layout', DefaultLayout)
+  Vue.component('Header', Header);
+  Vue.component('PagesHeader', PagesHeader);
+  Vue.component('SubFooter', SubFooter);
+  Vue.component('Footer', Footer);
   Vue.component('font-awesome-icon', FontAwesomeIcon)
 
   Vue.config.productionTip = false

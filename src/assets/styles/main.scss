@@ -6,6 +6,10 @@
   --color-grey: #E1E1E1;
 }
 
+// * {
+//   border: 1px solid red;
+// }
+
 body {
   line-height: 1.5;
   background: url('../bg.png') fixed;
@@ -25,22 +29,31 @@ button {
   user-select: none;
   background-color: transparent;
   border: 3px solid transparent;
-  padding: .6rem .75rem;
+  padding: .6rem;
   line-height: 1.5;
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 
   &:focus {
     outline-color: var(--color-primary);
   }
+}
 
-  @include for-tablet-portrait-up {
-    padding: .75rem .75rem;
+h4 {
+  font-size: 1.2rem;
+
+  @include for-desktop-up {
+    font-size: 1.5rem;
   }
+}
+
+section {
+  margin: auto;
+  position: relative;
 }
 
 .ut-btn {
   width: 100%;
-  max-width: 320px;
+  max-width: 270px;
   border-color: var(--color-secondary);
   color: var(--color-secondary);
   font-size: 1.3rem;
@@ -52,7 +65,7 @@ button {
   }
 
   @include for-tablet-portrait-up {
-    font-size: 1.875rem; 
+    font-size: 1.5rem; 
   }
 }
 
@@ -60,19 +73,23 @@ button {
   color: var(--color-secondary);
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 1.3rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
 
   @include for-desktop-up {
-    font-size: 2.8rem;
+    font-size: 2rem;
     text-align: left;
   }
 
   @include for-big-desktop-up {
-    font-size: 3.4rem;
+    font-size: 2.4rem;
   }
+}
+
+.content img {
+  max-width: 300px;
 }
 
 /* BOOTSTRAP OVERRIDES
@@ -84,4 +101,12 @@ button {
 
 .bg-grey {
   background-color: var(--color-grey) !important;
+}
+
+.text-primary {
+  color: var(--color-primary) !important;  
+}
+
+.text-secondary {
+  color: var(--color-secondary) !important;  
 }
