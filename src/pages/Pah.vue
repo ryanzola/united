@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <section id="what-is-pah" class="px-1 px-md-0 pb-3 pb-md-5 mb-3 mb-md-5 mt-md-5">
+    <section id="what-is-pah" class="px-1 px-md-0 pt-sm-5 pb-3 pb-md-5 mb-3 mb-md-5 mt-5">
       <b-container>
         <b-row class="mb-3">
           <b-col offset-lg="3">
@@ -108,7 +108,7 @@ import Layout from '~/layouts/Pages.vue'
 
 export default {
   metaInfo: {
-    title: 'About us'
+    title: 'What is PAH?'
   },
   components: {
     Layout

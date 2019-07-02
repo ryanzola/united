@@ -16,18 +16,7 @@
 </template>
 
 <script>
-
   export default {
-    mounted() {
-      let header = document.querySelector('.header');
-      header.style.background = 'rgba(244, 244, 253, 0)'
-      document.addEventListener('scroll', setBackgroundColor)
-
-      function setBackgroundColor() {
-        let offset = window.scrollY / (document.body.offsetHeight - window.innerHeight)
-        header.style.background = (offset * 16) > 0.99 ? 0.99 : `rgba(244, 244, 253, ${offset * 16})`;
-      }
-    }
   }
 </script>
 

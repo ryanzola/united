@@ -9,12 +9,9 @@
         </b-row>
         <b-row class="mt-md-5">
           <b-col class="text-center">
-            <b-nav-item to="#what-is-pah">
-              <svg viewBox="0 0 28 22" class="arrow">
-                <path d="M0 0 h28 l -14 22 l -14 -22 Z" fill="black" />
-              </svg>
-            </b-nav-item>
-
+            <svg viewBox="0 0 28 22" class="arrow">
+              <path d="M0 0 h28 l -14 22 l -14 -22 Z" fill="black" />
+            </svg>
           </b-col>
         </b-row>
       </b-container>
@@ -27,11 +24,9 @@
             <img src="../assets/ut-lungs.png" alt="lungs" class="w-100"> 
           </b-col>
 
-          <b-col lg="7" class="p-0 p-lg-5 text-center text-lg-left">     
+          <b-col sm="8" offset-sm="2" lg="7" offset-lg="0" class="p-lg-5 text-center text-lg-left">     
             <h1 class="title mb-4">WHAT IS PAH?</h1>
             <p class="mb-5">Looking for more info about <br>what PAH is? Look no further.</p>
-  
-
   
             <g-link to="/pah" class="ut-btn">
               <button class="ut-btn">Learn More</button>

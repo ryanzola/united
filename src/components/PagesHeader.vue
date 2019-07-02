@@ -10,11 +10,11 @@
 
     <b-collapse id="nav-collapse" is-nav class="py-sm-2 px-sm-0">
       <b-navbar-nav fill class="mx-lg-auto">
-        <b-nav-item to="pah">WHAT IS PAH?</b-nav-item>
-        <b-nav-item to="manage">MANAGING YOUR PAH</b-nav-item>
-        <b-nav-item to="treatment">TREATMENT</b-nav-item>
-        <b-nav-item to="resources">RESOURCES</b-nav-item>
-        <b-nav-item to="commitment">OUR COMMITMENT TO PAH</b-nav-item>
+        <b-nav-item to="/pah">WHAT IS PAH?</b-nav-item>
+        <b-nav-item to="/manage">MANAGING YOUR PAH</b-nav-item>
+        <b-nav-item to="/treatment">TREATMENT</b-nav-item>
+        <b-nav-item to="/resources">RESOURCES</b-nav-item>
+        <b-nav-item to="/commitment">OUR COMMITMENT TO PAH</b-nav-item>
         <b-nav-item to="#"><button class="join font-weight-bold">JOIN OUR EMAIL LIST</button></b-nav-item>
       </b-navbar-nav>
     </b-collapse>
@@ -24,16 +24,6 @@
 <script>
 import { setTimeout } from 'timers';
   export default {
-    mounted() {
-      let header = document.querySelector('.header');
-      header.style.background = 'rgba(244, 244, 253, 0)'
-      document.addEventListener('scroll', setBackgroundColor)
-
-      function setBackgroundColor() {
-        let offset = window.scrollY / (document.body.offsetHeight - window.innerHeight)
-        header.style.background = (offset * 16) > 0.99 ? 0.99 : `rgba(244, 244, 253, ${offset * 16})`;
-      }
-    }
   }
 </script>
 
