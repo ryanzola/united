@@ -13,5 +13,8 @@ module.exports = {
       { src: './vendor/gsap/umd/ThrowPropsPlugin.js' },
     ]
   },
-  plugins: []
+  plugins: [],
+  // configureWebpack: {
+  //   devtool: 'source-map'
+  // }
 }
