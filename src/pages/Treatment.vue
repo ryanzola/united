@@ -15,7 +15,7 @@
           </b-col>
 
           <b-col lg="6" class="pt-5 mt-5 mb-4 mb-lg-0">
-            <img src="../assets/blood-vessels-thumb.png" alt="video thumbnail" class="w-100">
+            <img v-b-modal.modal-1 src="../assets/blood-vessels-thumb.png" alt="video thumbnail" class="w-100 video-thumb">
           </b-col>
         </b-row>
       </b-container>
@@ -147,6 +147,10 @@
           </b-row>
       </b-container>
     </section><!-- common-tests -->
+
+    <b-modal id="modal-1" title="BootstrapVue">
+      <p class="my-4">Hello from modal!</p>
+    </b-modal>
   </Layout>
 </template>
 
