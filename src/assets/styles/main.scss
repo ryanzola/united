@@ -12,8 +12,26 @@
 
 body {
   line-height: 1.5;
-  background: url('../bg.png') fixed;
-  background-size: 184px 184px;
+  background: url('data:image/svg+xml,\
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">\
+   <defs>\
+     <filter id="noise">\
+       <feTurbulence type="fractalNoise" baseFrequency="0.5" result="noisy" />\
+       <feColorMatrix\
+         in="noisy"\
+         type="matrix"\
+         values="\
+          0.4 0   0   0   0\
+          0   0   0   0   0\
+          0   0   0.4 0   0\
+          0   0   0   0.2 0 "\
+          result="noisy2"/>\
+     <feBlend in="SourceGraphic" in2="noisy2" mode="multiply" />\
+     </filter>\
+   </defs>\
+    <rect height="100" width="100" filter="url(%23noise)" fill="rgba(244, 229, 255, 0.2)" />\
+  </svg>') fixed;
+  background-size: 100px 100px;
   background-repeat: repeat;
 }
 
@@ -90,6 +108,10 @@ section {
 
 .content img {
   max-width: 300px;
+}
+
+img.video-thumb {
+  cursor: pointer;
 }
 
 /* BOOTSTRAP OVERRIDES
