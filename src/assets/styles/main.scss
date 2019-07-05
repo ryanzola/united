@@ -114,7 +114,7 @@ img.video-thumb {
   cursor: pointer;
 }
 
-/* BOOTSTRAP OVERRIDES
+/* BOOTSTRAP BASE OVERRIDES
 =============================================== */
 
 .bg-primary {
@@ -131,4 +131,47 @@ img.video-thumb {
 
 .text-secondary {
   color: var(--color-secondary) !important;  
+}
+
+/* BOOTSTRAP FOOTER OVERRIDES
+=============================================== */
+
+.modal-content {
+  background-color: var(--color-primary);
+}
+
+.modal-content .modal-title {
+  font-weight: bold;
+}
+
+.modal-content .modal-header {
+  border-bottom: none;
+}
+
+.modal-content .modal-footer {
+  justify-content: center;
+  border-top: none;
+}
+
+.modal-content .modal-footer .btn {
+  font-weight: bold;
+  border-radius: 0;
+  margin: 0 1rem;
+}
+
+.modal-content .modal-footer .btn.btn-primary {
+  min-width: 140px;
+  background-color: white;
+  color: var(--color-secondary);
+  border-color: white;
+}
+
+.modal-content .modal-footer .btn.btn-secondary {
+  background-color: transparent;
+  border-color: var(--color-secondary);
+  color: black;
+}
+
+.modal-backdrop {
+  opacity: 0.85;
 }
