@@ -15,7 +15,10 @@
           <b-col offset-lg="2">
             <b-row class="d-flex mb-lg-3">
               <b-col lg="7" class="align-self-end">
-                <a class="resource-link font-weight-bold p-3 text-center" href="https://phassociation.org/">Pulmonary Hypertension Association</a>
+     
+                <button class="resource-link" v-b-modal.modalUT>
+                  Pulmonary Hypertension Association
+                </button>
               </b-col>
 
               <b-col lg="4" class="p-0">
@@ -43,7 +46,7 @@
               </b-col>
     
               <b-col lg="5">     
-                <h3 class=" col-sm-6 p-3 mb-3 text-center font-weight-bold">PHAware</h3>
+                <button class="resource-link col-sm-6 p-3 mb-3">PHAware</button>
                 <p class="pr-lg-5 mb-0">
                   <strong>PHAware</strong> creates awareness and global engagement 
                   on behalf of families affected by PAH, medical 
@@ -57,7 +60,7 @@
           <b-col>
             <b-row class="mb-lg-3">
               <b-col lg="8" class="pt-lg-4">
-                <a class="resource-link font-weight-bold p-3 mb-lg-3 text-center col-lg-6" href="https://www.phaware.global/">Scleroderma Foundation</a>
+                <button class="resource-link p-3 mb-lg-3 col-lg-6" href="https://www.phaware.global/">Scleroderma Foundation</button>
 
                 <p class="col-lg-9 p-0 pr-lg-5">
                   <strong>Scleroderma</strong> is a chronic connective tissue disease in which 
@@ -81,7 +84,7 @@
           </b-col>
 
           <b-col lg="5">     
-            <h3 class=" col-sm-6 p-3 mb-3 text-center font-weight-bold">PH News</h3>
+            <button class="resource-link col-sm-6 p-3 mb-3">PH News</button>
             <p class="pr-lg-5 mb-0">
               Valuable news and articles about<br> 
               developments in PH research and therapies.
@@ -101,9 +104,9 @@
 
         <b-row>
           <b-col offset-lg="1">
-            <h3 class="p-3 text-center col-lg-3">
+            <button class="resource-link p-3 col-lg-3">
               PeerNetwork.net 
-            </h3>
+            </button>
           </b-col>
         </b-row>
 
@@ -139,11 +142,26 @@
               Go directly to our site.
             </h4>
 
-            <h3 class="p-3 col-lg-6 offset-lg-4 text-center">Visit FightingPAH.com right now</h3>
+            <button class="resource-link p-3 col-lg-6 offset-lg-4">Visit FightingPAH.com right now</button>
           </b-col>
         </b-row>
       </b-container>
     </section>
+
+    <b-modal 
+      id="modalUT" 
+      title-tag="h4" 
+      title="YOU'RE LEAVING THIS PAGE AND HEADING TO A DIFFERENT UNITED THERAPEUTICS SITE" 
+      header-class="text-secondary"
+      body-class="p-0"
+      ok-title="Go Now" 
+      cancel-title="Return To Site">
+
+      <template slot="modal-footer" slot-scope="{ close }">
+        <b-btn variant="primary" href="http://www.fightingpah.com">Go Now</b-btn>
+        <b-btn variant="secondary" @click="close()">Return To Site</b-btn>
+      </template>
+    </b-modal>
   </Layout>
 </template>
 
@@ -167,10 +185,10 @@ h3 {
   border: 2px solid var(--color-secondary);
 }
 
-a.resource-link {
-  text-decoration: none;
+.resource-link {
   color: black;
   font-size: 1.75rem;
+  font-weight: bold;
   border: 2px solid var(--color-secondary);
 }
 </style>
