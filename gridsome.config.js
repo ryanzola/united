@@ -14,7 +14,7 @@ module.exports = {
     ]
   },
   plugins: [],
-  // configureWebpack: {
-  //   devtool: 'source-map'
-  // }
+  configureWebpack: {
+    devtool: 'source-map'
+  }
 }

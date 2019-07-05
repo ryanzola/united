@@ -15,7 +15,7 @@
           </b-col>
 
           <b-col lg="6" class="pt-5 mt-5 mb-4 mb-lg-0">
-            <img v-b-modal.modal-1 src="../assets/blood-vessels-thumb.png" alt="video thumbnail" class="w-100 video-thumb">
+            <img v-b-modal.modal-video src="../assets/blood-vessels-thumb.png" alt="video thumbnail" class="w-100 video-thumb">
           </b-col>
         </b-row>
       </b-container>
@@ -136,7 +136,7 @@
                     by United Therapeutics.
                   </h2>
 
-                  <button class="ut-btn">Go Now</button>
+                  <button class="ut-btn" v-b-modal.modal-1>Go Now</button>
                 </b-col>
               </b-row>
             </b-col><!-- copy -->
@@ -148,8 +148,26 @@
       </b-container>
     </section><!-- common-tests -->
 
-    <b-modal id="modal-1" title="BootstrapVue">
-      <p class="my-4">Hello from modal!</p>
+    <b-modal id="modal-1" ok-title="Go Now" cancel-title="Return To Site" body-class="p-0">
+      <template slot="modal-title">
+        <h4 class="text-secondary font-weight-bold">
+          YOU'RE LEAVING THIS PAGE AND 
+          HEADING TO A SITE WITH INFORMATION 
+          ABOUT TREATMENT OPTIONS FROM 
+          UNITED THERAPEUTICS
+        </h4>
+      </template>
+
+      <template slot="modal-footer" slot-scope="{ close }">
+        <b-btn variant="primary" href="http://www.hot-dog.org">Go Now</b-btn>
+        <b-btn variant="secondary" @click="close()">Return To Site</b-btn>
+      </template>
+    </b-modal>
+
+    <b-modal centered size="lg" id="modal-video" hide-footer="true" body-class="text-center">
+      <template slot="default">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/qRB0Y8EnalA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </template>
     </b-modal>
   </Layout>
 </template>
@@ -192,4 +210,5 @@ export default {
   //   transform: translate(-40%, 45px);  
   // }
 }
+
 </style>
