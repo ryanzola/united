@@ -140,6 +140,10 @@ img.video-thumb {
   background-color: var(--color-primary);
 }
 
+.modal-content .modal-title {
+  font-weight: bold;
+}
+
 .modal-content .modal-header {
   border-bottom: none;
 }
@@ -152,6 +156,7 @@ img.video-thumb {
 .modal-content .modal-footer .btn {
   font-weight: bold;
   border-radius: 0;
+  margin: 0 1rem;
 }
 
 .modal-content .modal-footer .btn.btn-primary {

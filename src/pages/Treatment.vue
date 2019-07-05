@@ -148,26 +148,23 @@
       </b-container>
     </section><!-- common-tests -->
 
-    <b-modal id="modal-1" ok-title="Go Now" cancel-title="Return To Site" body-class="p-0">
-      <template slot="modal-title">
-        <h4 class="text-secondary font-weight-bold">
-          YOU'RE LEAVING THIS PAGE AND 
-          HEADING TO A SITE WITH INFORMATION 
-          ABOUT TREATMENT OPTIONS FROM 
-          UNITED THERAPEUTICS
-        </h4>
-      </template>
+    <b-modal 
+      id="modal-1" 
+      title-tag="h4" 
+      title="YOU'RE LEAVING THIS PAGE AND HEADING TO A SITE WITH INFORMATION ABOUT TREATMENT OPTIONS FROM UNITED THERAPEUTICS" 
+      header-class="text-secondary"
+      body-class="p-0"
+      ok-title="Go Now" 
+      cancel-title="Return To Site">
 
       <template slot="modal-footer" slot-scope="{ close }">
-        <b-btn variant="primary" href="http://www.hot-dog.org">Go Now</b-btn>
+        <b-btn variant="primary" href="http://www.fightingpah.com">Go Now</b-btn>
         <b-btn variant="secondary" @click="close()">Return To Site</b-btn>
       </template>
     </b-modal>
 
-    <b-modal centered size="lg" id="modal-video" hide-footer="true" body-class="text-center">
-      <template slot="default">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/qRB0Y8EnalA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </template>
+    <b-modal centered size="lg" id="modal-video" hide-footer body-class="text-center">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/qRB0Y8EnalA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </b-modal>
   </Layout>
 </template>

@@ -15,7 +15,7 @@
           <b-col offset-lg="2">
             <b-row class="d-flex mb-lg-3">
               <b-col lg="7" class="align-self-end">
-                <h3 class="font-weight-bold p-3 text-center">Pulmonary Hypertension Association</h3>
+                <a class="resource-link font-weight-bold p-3 text-center" href="https://phassociation.org/">Pulmonary Hypertension Association</a>
               </b-col>
 
               <b-col lg="4" class="p-0">
@@ -57,7 +57,7 @@
           <b-col>
             <b-row class="mb-lg-3">
               <b-col lg="8" class="pt-lg-4">
-                <h3 class="font-weight-bold p-3 mb-lg-3 text-center col-lg-6">Scleroderma Foundation</h3>
+                <a class="resource-link font-weight-bold p-3 mb-lg-3 text-center col-lg-6" href="https://www.phaware.global/">Scleroderma Foundation</a>
 
                 <p class="col-lg-9 p-0 pr-lg-5">
                   <strong>Scleroderma</strong> is a chronic connective tissue disease in which 
@@ -164,6 +164,13 @@ export default {
 @import '~/assets/styles/_breakpoints.scss';
 
 h3 {
+  border: 2px solid var(--color-secondary);
+}
+
+a.resource-link {
+  text-decoration: none;
+  color: black;
+  font-size: 1.75rem;
   border: 2px solid var(--color-secondary);
 }
 </style>
