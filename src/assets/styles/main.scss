@@ -156,7 +156,13 @@ img.video-thumb {
 .modal-content .modal-footer .btn {
   font-weight: bold;
   border-radius: 0;
-  margin: 0 1rem;
+  font-size: 0.8em;
+  margin: 0 0.6rem;
+  
+  @include for-desktop-up {
+    font-size: 1em;
+    margin: 0 1rem;
+  }
 }
 
 .modal-content .modal-footer .btn.btn-primary {
