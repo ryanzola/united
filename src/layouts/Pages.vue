@@ -3,7 +3,7 @@
     <div>
         <PagesHeader />
         <slot />
-        <SubFooter />
+        <SubFooter v-if="$router.currentRoute.path !== '/mailing-list'"/>
         <Footer />
     </div>
   </transition>

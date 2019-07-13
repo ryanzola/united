@@ -15,7 +15,7 @@
         <b-nav-item to="/treatment">TREATMENT</b-nav-item>
         <b-nav-item to="/resources">RESOURCES</b-nav-item>
         <b-nav-item to="/commitment">OUR COMMITMENT TO PAH</b-nav-item>
-        <b-nav-item to="#"><button class="join font-weight-bold">JOIN OUR EMAIL LIST</button></b-nav-item>
+        <b-nav-item to="/mailing-list" class="join font-weight-bold">JOIN OUR EMAIL LIST</b-nav-item>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
@@ -92,13 +92,25 @@ import { setTimeout } from 'timers';
   color: var(--color-secondary);
 }
 
-.navbar-light .navbar-nav .nav-item button.join {
+.navbar-light .navbar-nav .nav-item.join .nav-link {
   max-width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: black;
   color: white;
-
+  padding: 0.375rem 0.75rem;
   &:hover {
     color: #ccc;
+  }
+}
+
+.nav-item.join .nav-link.router-link-exact-active.router-link-active {
+  color: black;
+  background-color: var(--color-primary);
+
+  &:hover {
+    color: var(--color-secondary);
   }
 }
 </style>
