@@ -4,12 +4,12 @@
 
     <b-collapse id="nav-collapse" is-nav class="py-sm-2 px-sm-0">
       <b-navbar-nav fill class="mx-lg-auto">
-        <b-nav-item href="/pah" class="d-flex justify-content-center align-items-center">WHAT IS PAH?</b-nav-item>
-        <b-nav-item href="/manage" class="d-flex justify-content-center align-items-center">MANAGING YOUR PAH</b-nav-item>
-        <b-nav-item href="treatment" class="d-flex justify-content-center align-items-center">TREATMENT</b-nav-item>
-        <b-nav-item href="resources" class="d-flex justify-content-center align-items-center">RESOURCES</b-nav-item>
-        <b-nav-item href="commitment" class="d-flex justify-content-center align-items-center">OUR COMMITMENT TO PAH</b-nav-item>
-        <b-nav-item href="#"><button class="join font-weight-bold">JOIN OUR EMAIL LIST</button></b-nav-item>
+        <b-nav-item to="/pah" class="d-flex justify-content-center align-items-center">WHAT IS PAH?</b-nav-item>
+        <b-nav-item to="/manage" class="d-flex justify-content-center align-items-center">MANAGING YOUR PAH</b-nav-item>
+        <b-nav-item to="/treatment" class="d-flex justify-content-center align-items-center">TREATMENT</b-nav-item>
+        <b-nav-item to="/resources" class="d-flex justify-content-center align-items-center">RESOURCES</b-nav-item>
+        <b-nav-item to="/commitment" class="d-flex justify-content-center align-items-center">OUR COMMITMENT TO PAH</b-nav-item>
+        <b-nav-item to="/mailing-list" class="join font-weight-bold">JOIN OUR EMAIL LIST</b-nav-item>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
@@ -70,7 +70,7 @@
   }
 }
 
-.navbar-light .navbar-nav .nav-item button.join {
+.navbar-light .navbar-nav .nav-item.join .nav-link {
   max-width: 200px;
   background-color: black;
   color: white;
