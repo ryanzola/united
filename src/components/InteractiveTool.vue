@@ -200,28 +200,20 @@ export default {
                 on: {
                   INIT_INTERMEDIATE: 'intermediate',
                   INIT_HIGH: 'high',
-                  INIT_TRANSITION: 'transition'
                 }
               },
               intermediate: {
                 on: {
                   INIT_LOW: 'low',
                   INIT_HIGH: 'high',
-                  INIT_TRANSITION: 'transition'
                 }
               },
               high: {
                 on: {
                   INIT_LOW: 'low',
                   INIT_INTERMEDIATE: 'intermediate',
-                  INIT_TRANSITION: 'transition'
                 }
               },
-              transition: {
-                INIT_LOW: 'low',
-                INIT_INTERMEDIATE: 'intermediate',
-                INIT_HIGH: 'high'
-              }
             }
           },
           info: {
